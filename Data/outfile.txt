@@ -1,0 +1,2 @@
+id:1,name:samkam,email:samkam@gmail.com,password:test1234,role:user
+id:2,name:samuel,email:samuel@gmail.com,password:test1234,role:user
