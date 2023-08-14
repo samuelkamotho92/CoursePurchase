@@ -13,6 +13,7 @@ namespace Authentication.UserAuth
     public class RegisterUser
     {
         public string status;
+        public string role;
         public void checkOption()
         {
             Console.WriteLine("Enter Options");
@@ -105,12 +106,19 @@ namespace Authentication.UserAuth
                 string[] parts = line.Split(',');
                 string[] emailval = parts[2].Split(':');
                 string[] passval = parts[3].Split(':');
+                string[] roleval = parts[4].Split(':');
 
-                if (email == emailval[1] && password == passval[1])
+                if (email == emailval[1] && password == passval[1] )
                 {
-                     Console.WriteLine("Logged In Successfuly");
-                    Dashboard();
+                    checkUser(roleval[1]);
+                    // Console.WriteLine("Logged In Successfuly");
+                    //Dashboard();
+
                 }
+                //else if(role == "admin")
+                //{
+                //Console.WriteLine("check admin");
+                //}
                 
             }
             //if (status=="loggedIn")
@@ -126,11 +134,32 @@ namespace Authentication.UserAuth
 
         }
 
+        public void checkUser(string role)
+        {
+            if (role == "admin")
+            {
+                AdminPage();
+            }
+            else
+            {
+                Dashboard();
+               
+            }
+        
+            Console.WriteLine(role);
+        }
+
         public void Dashboard()
         {
             Console.WriteLine("Check courses");
             DisplayCourses showCourses = new DisplayCourses();
             showCourses.showPlanCategory();
+        }
+        public void AdminPage()
+        {
+            Console.WriteLine("Welcome to Admin Page");
+            AdminActions adminOne = new AdminActions();
+            adminOne.chooseCategory();
         }
     }
 }

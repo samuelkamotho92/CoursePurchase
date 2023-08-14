@@ -53,7 +53,7 @@ namespace Authentication.Courses
             }
             else
             {
-                Console.WriteLine("amount is low kindly top up");
+                Console.WriteLine($"amount is low kindly ,remaining {Cash-selectedPlan.Price} to get the course");
                 topUpAirTime(id);
             }
         }
@@ -70,7 +70,7 @@ namespace Authentication.Courses
             if (outputVal != 0)
             {
                 Cash += outputVal;
-                Console.WriteLine($"Current Amount {Cash} ,data amount is {selectedPlan.Price}");
+                Console.WriteLine($"Current Amount {Cash} ,Course amount is {selectedPlan.Price}");
                 continuePucharse(id);
             }
 

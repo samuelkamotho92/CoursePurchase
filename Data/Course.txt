@@ -1,0 +1,4 @@
+﻿id:1,Name:C# Full Stack Development,Plans:Csharp,Price=50000
+id:2,Name:Javascript Full-Stack Development,Plans:Javascript,Price=40000
+id:3,Name:QA/QE,Plans:QAQE,Price=20000
+id:4,Name:WordPres Full Stack Development,Plans:Wordpress,Price=30000

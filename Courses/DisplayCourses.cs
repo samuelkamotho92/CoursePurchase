@@ -44,7 +44,7 @@ namespace Authentication.Courses
 
             foreach (var item in filtered)
             {
-                Console.WriteLine($"{item} value");
+                Console.WriteLine($"{item.Plans} courses include");
                 Console.WriteLine($"{item.Id} : {item.Name} at {item.Price}");
 
             }
